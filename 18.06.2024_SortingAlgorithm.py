@@ -74,7 +74,7 @@ def insertionSortTest(listToSort):
 def quickSortTestMain(listToSort):
     startTime = time.time()
 
-    #listToSort = quickSortTest(listToSort, 0, len(listToSort) - 1)
+    # listToSort = quickSortTest(listToSort, 0, len(listToSort) - 1)
     listToSort = iterativeQuickSort(listToSort)
 
     endTime = time.time()
