@@ -57,12 +57,12 @@ def insertionSortTest(listToSort):
     while i < length:
         z = listToSort[i]
         j = i
-        while (j > 0) and (listToSort[j-1] > z):
-            listToSort[j] = listToSort[j-1]
-            j = j-1
+        while (j > 0) and (listToSort[j - 1] > z):
+            listToSort[j] = listToSort[j - 1]
+            j = j - 1
         listToSort[j] = z
-        i = i+1
-    
+        i = i + 1
+
     endTime = time.time()
 
     finalTime = endTime - startTime
@@ -119,16 +119,16 @@ def quickSortTest(L, anfang, ende):
         rechts = ende
         while links <= rechts:
             while L[links] < pivot:
-                links = links+1
+                links = links + 1
             while L[rechts] > pivot:
-                rechts = rechts-1
+                rechts = rechts - 1
             if links <= rechts:
                 if links < rechts:
                     h = L[links]
                     L[links] = L[rechts]
                     L[rechts] = h
-                links = links+1
-                rechts = rechts-1
+                links = links + 1
+                rechts = rechts - 1
         if anfang < rechts:
             L = quickSortTest(L, anfang, rechts)
         if links < ende:
